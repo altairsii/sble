@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="DebugFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <!-- Tests run on modern PCs show that buffering related property -->
+    <!-- "ImmediateFlush" has negligible impact and will be ignored.  -->
+    <!--See also http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
+    <Append>true</Append>
+    <File>/opt/vfin/log/debug/debug.log</File>
+    <encoder>
+      <pattern>%d{MM-dd HH:mm:ss} [%p] [%t] [%c\(%r\)] %m%n</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>DEBUG</level>
+    </filter>
+    <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+      <maxIndex>256</maxIndex>
+      <FileNamePattern>/opt/vfin/log/debug/debug.log</FileNamePattern>
+    </rollingPolicy>
+    <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+      <MaxFileSize>8MB</MaxFileSize>
+    </triggeringPolicy>
+  </appender>
+  <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- Tests run on modern PCs show that buffering related property -->
+    <!-- "ImmediateFlush" has negligible impact and will be ignored.  -->
+    <Target>System.out</Target>
+    <encoder>
+      <pattern>%d{MM-dd HH:mm:ss} [%p] [%t] [%c\(%r\)] %m%n</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>INFO</level>
+    </filter>
+  </appender>
+  <appender name="LogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <!-- Tests run on modern PCs show that buffering related property -->
+    <!-- "ImmediateFlush" has negligible impact and will be ignored.  -->
+    <!--See also http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
+    <File>/opt/vfin/log/info/log.log</File>
+    <Append>true</Append>
+    <encoder>
+      <pattern>%d{MM-dd HH:mm:ss} [%p] [%t] [%c\(%r\)] %m%n</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>INFO</level>
+    </filter>
+    <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+      <maxIndex>256</maxIndex>
+      <FileNamePattern>/opt/vfin/log/info/log.log</FileNamePattern>
+    </rollingPolicy>
+    <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+      <MaxFileSize>8MB</MaxFileSize>
+    </triggeringPolicy>
+  </appender>
+  <appender name="ErrorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <!-- Tests run on modern PCs show that buffering related property -->
+    <!-- "ImmediateFlush" has negligible impact and will be ignored.  -->
+    <!--See http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
+    <!--and http://logback.qos.ch/manual/appenders.html#TimeBasedRollingPolicy-->
+    <!--for further documentation-->
+    <Append>true</Append>
+    <File>/opt/vfin/log/error/error.log</File>
+    <encoder>
+      <pattern>%d{MM-dd HH:mm:ss} [%p] [%t] [%c\(%r\)] %m%n</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>ERROR</level>
+    </filter>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>/opt/vfin/log/error/error.log.%d{'.'yyyy-MM-dd}</fileNamePattern>
+    </rollingPolicy>
+  </appender>
+  <root level="debug">
+    <appender-ref ref="DebugFile"/>
+    <appender-ref ref="Console"/>
+    <appender-ref ref="LogFile"/>
+    <appender-ref ref="ErrorFile"/>
+  </root>
+</configuration>
