@@ -50,8 +50,14 @@
 			<artifactId>gson</artifactId>
 			<version>2.3.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+
 	</dependencies>
 	<build>
-		<finalName>sbleng</finalName>
+		<finalName>sble</finalName>
 	</build>
 </project>
