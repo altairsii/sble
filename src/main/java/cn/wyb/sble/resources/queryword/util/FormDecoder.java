@@ -20,7 +20,7 @@ public class FormDecoder {
     private static final String empty = "";
 
     /**
-     * <h1>解码form表单形式的参数，参数的值是以utf-8做URLEncode</h1>
+     * <h1>瑙ｇ爜form琛ㄥ崟褰㈠紡鐨勫弬鏁帮紝鍙傛暟鐨勫�兼槸浠tf-8鍋歎RLEncode</h1>
      * <b>form example:</b> <code>id=1&name=sb.&address=shanghai&address=newyork</code>
      * @param formEncodedString
      * @return

@@ -4,7 +4,7 @@ package cn.wyb.sble.resources.queryword.util;
 public class SafeUtil {
 
     /**
-     * ·ÀÖ¹²ÎÊı×¢Èë£¬XSS¹¥»÷
+     * é˜²æ­¢å‚æ•°æ³¨å…¥ï¼ŒXSSæ”»å‡»
      * @param value
      * @return
      */

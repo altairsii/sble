@@ -1,6 +1,7 @@
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
   <head>
 
     <meta charset="utf-8">
@@ -9,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>扇贝查单词</title>
+    <title><spring:message code="label.title" /></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +45,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="queryword.html">扇贝查单词</a>
+                <a class="navbar-brand" href="queryword.html"><spring:message code="label.title" /></a>
             </div>
             <!-- /.navbar-header -->
 
@@ -55,7 +56,7 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="queryword.html"><i class="fa fa-dashboard fa-fw"></i> 查单词</a>
+                            <a href="queryword.html"><i class="fa fa-dashboard fa-fw"></i> <spring:message code="label.title1" /></a>
                         </li>
                     </ul>
                 </div>
@@ -69,17 +70,17 @@
             <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            查单词
+                            <spring:message code="label.title1" />
                         </div>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <form role="form" action="queryword.html" method="get">
                                         <div class="form-group">
-                                            <label>单词</label>
+                                            <label><spring:message code="label.word" /></label>
                                             <input class="form-control" name="word" value="${word }">
                                         </div>
-                                        <button type="submit" class="btn btn-default">查询</button>
+                                        <button type="submit" class="btn btn-default"><spring:message code="label.search" /></button>
                                     </form>
                                 </div>
                             </div>
@@ -90,7 +91,7 @@
                     <!-- /.panel -->
                 </div>
                 <div class="col-lg-12">
-                    <h1 class="page-header">单词含义</h1>
+                    <h1 class="page-header"><spring:message code="label.wordmeaning" /></h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -104,9 +105,9 @@
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th>中文释义</th>
-                                            <th>英文释义</th>
-                                            <th>音标</th>
+                                            <th><spring:message code="label.chmeaning" /></th>
+                                            <th><spring:message code="label.enmeaning" /></th>
+                                            <th><spring:message code="label.phoneticsymbol" /></th>
                                         </tr>
                                     </thead>
                                     <tbody>

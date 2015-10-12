@@ -7,12 +7,12 @@ package cn.wyb.sble.resources.queryword.constant;
 public interface QueryWordConstant {
 
 	/**
-	 * ÉÈ±´²éµ¥´ÊµÄurl
+	 * æ‰‡è´æŸ¥å•è¯çš„url
 	 */
 	String  SB_URL = "https://api.shanbay.com/bdc/search/?word=";
 	
 	/**
-	 *UTF-8×Ö·û¼¯ 
+	 *UTF-8å­—ç¬¦é›† 
 	 */
 	String CHARSET_UTF8 = "UTF-8";
 	
@@ -27,7 +27,7 @@ public interface QueryWordConstant {
 	String GET = "GET";
 	
     /**
-     * Ä¬ÈÏÊ±¼ä¸ñÊ½ 
+     * é»˜è®¤æ—¶é—´æ ¼å¼ 
      */
     String DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
 }

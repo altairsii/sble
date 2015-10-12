@@ -26,9 +26,9 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
  * All right reserved.
  * Create Date: 2009-8-15
  * Create Author: liurong
- * File Name:  josn¹¤¾ß
+ * File Name:  josnå·¥å…·
  * Last version:  1.0
- * Function:ÕâÀïĞ´×¢ÊÍ
+ * Function:è¿™é‡Œå†™æ³¨é‡Š
  * Last Update Date:
  * Change Log:
 **************************************************/ 
@@ -73,15 +73,15 @@ public class JsonUtil {
     public JsonUtil(Include include){
         mapper = new ObjectMapper(); 
         mapper.setSerializationInclusion(include); 
-       //ÉèÖÃÊäÈëÊ±ºöÂÔÔÚJSON×Ö·û´®ÖĞ´æÔÚµ«Java¶ÔÏóÊµ¼ÊÃ»ÓĞµÄÊôĞÔ 
+       //è®¾ç½®è¾“å…¥æ—¶å¿½ç•¥åœ¨JSONå­—ç¬¦ä¸²ä¸­å­˜åœ¨ä½†Javaå¯¹è±¡å®é™…æ²¡æœ‰çš„å±æ€§ 
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false); 
-        //½ûÖ¹Ê¹ÓÃint´ú±íEnumµÄorder()í·´ĞòÁĞ»¯Enum,·Ç³£Î£ëU 
+        //ç¦æ­¢ä½¿ç”¨intä»£è¡¨Enumçš„order()ä¾†ååºåˆ—åŒ–Enum,éå¸¸å±éšª 
         mapper.configure(DeserializationFeature.FAIL_ON_NUMBERS_FOR_ENUMS, true); 
         setDateFormat(QueryWordConstant.DATE_TIME_FORMAT);
          
     }
     /**
-     * ´´½¨Êä³öÈ«²¿ÊôĞÔ
+     * åˆ›å»ºè¾“å‡ºå…¨éƒ¨å±æ€§
      * @return
      */
     public static JsonUtil buildNormalBinder(){
@@ -93,7 +93,7 @@ public class JsonUtil {
         return JsonUtil.allJsonUtil;
     }
     /**
-     * ´´½¨Ö»Êä³ö·Ç¿ÕÊôĞÔµÄ
+     * åˆ›å»ºåªè¾“å‡ºéç©ºå±æ€§çš„
      * @return
      */
     public static JsonUtil buildNonNullBinder(){
@@ -105,7 +105,7 @@ public class JsonUtil {
         return JsonUtil.notNullJsonUtil;
     }
     /**
-     * ´´½¨Ö»Êä³ö³õÊ¼Öµ±»¸Ä±äµÄÊôĞÔ
+     * åˆ›å»ºåªè¾“å‡ºåˆå§‹å€¼è¢«æ”¹å˜çš„å±æ€§
      * @return
      */
     public static JsonUtil buildNonDefaultBinder(){
@@ -117,7 +117,7 @@ public class JsonUtil {
         return JsonUtil.notDefJsonUtil;
     }
     /**
-     * ´´½¨Ö»Êä³ö³õÊ¼Öµ±»¸Ä±äµÄÊôĞÔ
+     * åˆ›å»ºåªè¾“å‡ºåˆå§‹å€¼è¢«æ”¹å˜çš„å±æ€§
      * @return
      */
     public static JsonUtil buildNonEmptyBinder(){
@@ -130,7 +130,7 @@ public class JsonUtil {
     }
 
     /**
-     * °Ñjson×Ö·û´®×ª³É¶ÔÏó
+     * æŠŠjsonå­—ç¬¦ä¸²è½¬æˆå¯¹è±¡
      * @param json
      * @param clazz
      * @return
@@ -147,7 +147,7 @@ public class JsonUtil {
         return object;
     }
     /**
-     * °ÑJSON×ª³Élist
+     * æŠŠJSONè½¬æˆlist
      * @param json [{"...":"...","...":"...","...":"..."}] 
      * @param clazz map
      * @return
@@ -166,7 +166,7 @@ public class JsonUtil {
     }
     
     /**
-     * °ÑJSON×ª³ÉlistÖĞÊÇMAP¡¶String£¬clazz¡·
+     * æŠŠJSONè½¬æˆlistä¸­æ˜¯MAPã€ŠStringï¼Œclazzã€‹
      * @param json
      * @param clazz
      * @return
@@ -208,7 +208,7 @@ public class JsonUtil {
         return object;
     }
     /**
-     * °ÑJSON×ª³ÉMap
+     * æŠŠJSONè½¬æˆMap
      * @param json
      * @param keyclazz
      * @param valueclazz
@@ -227,10 +227,10 @@ public class JsonUtil {
         return object;
     }
     /**
-     * °ÑJSON×ª³ÉMap<> valueÊÇMAPÀàĞÍ(KEY string )
+     * æŠŠJSONè½¬æˆMap<> valueæ˜¯MAPç±»å‹(KEY string )
      * @param json
      * @param keyclazz
-     * @param valueclazz MAPÖĞµÄvalue CLASS
+     * @param valueclazz MAPä¸­çš„value CLASS
      * @return
      */
     @SuppressWarnings("rawtypes")
@@ -246,10 +246,10 @@ public class JsonUtil {
         return object;
     }
     /**
-     * °ÑJSON×ª³ÉMap<> valueÊÇLISTÀàĞÍ
+     * æŠŠJSONè½¬æˆMap<> valueæ˜¯LISTç±»å‹
      * @param json
      * @param keyclazz
-     * @param valueclazz LISTÖĞµÄCLASS
+     * @param valueclazz LISTä¸­çš„CLASS
      * @return
      */
     @SuppressWarnings("rawtypes")
@@ -265,7 +265,7 @@ public class JsonUtil {
         return object;
     }
     /**
-     * °Ñjson¸ñÊ½Êı¾İ×°³Émap
+     * æŠŠjsonæ ¼å¼æ•°æ®è£…æˆmap
      * @param str
      * @return
      */
@@ -289,7 +289,7 @@ public class JsonUtil {
     }
 
     /**
-     * °Ñmap×ª³ÉcomboÊı¾İ¸ñÊ½µÄjson¸ñÊ½
+     * æŠŠmapè½¬æˆcomboæ•°æ®æ ¼å¼çš„jsonæ ¼å¼
      * @return String (json)
      */
     public String getMapToJson(Map<String,String> map) {
@@ -306,8 +306,8 @@ public class JsonUtil {
     }
 
     /**
-     * °Ñ¶ÔÏó×ª³Éjson¸ñÊ½
-     * @param obj ĞèÒª×ªµÄ¶ÔÏó
+     * æŠŠå¯¹è±¡è½¬æˆjsonæ ¼å¼
+     * @param obj éœ€è¦è½¬çš„å¯¹è±¡
      * @return String
      */
     @SuppressWarnings("rawtypes")
@@ -325,7 +325,7 @@ public class JsonUtil {
     }
     
     /**
-     * °ÑJSON×ª³ÉObject
+     * æŠŠJSONè½¬æˆObject
      * @param json
      * @param keyclazz
      * @param valueclazz
@@ -344,7 +344,7 @@ public class JsonUtil {
     }
     
     /**
-     * °ÑJSON×ª³ÉObject
+     * æŠŠJSONè½¬æˆObject
      * @param <T>
      * @param json
      * @param keyclazz
@@ -362,7 +362,7 @@ public class JsonUtil {
         return object;
     }
     /**
-     * °Ñ¶ÔÏó×ª³É×Ö·û´®
+     * æŠŠå¯¹è±¡è½¬æˆå­—ç¬¦ä¸²
      * @param object
      * @return
      */
@@ -376,7 +376,7 @@ public class JsonUtil {
         return json;
     }
     /**
-     * ÉèÖÃÈÕÆÚ¸ñÊ½
+     * è®¾ç½®æ—¥æœŸæ ¼å¼
      * @param pattern
      */
     public void setDateFormat(String pattern){

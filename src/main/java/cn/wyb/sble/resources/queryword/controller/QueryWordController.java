@@ -29,7 +29,7 @@ import cn.wyb.sble.resources.queryword.util.QueueWordFromSBByPool;
 import com.google.gson.JsonObject;
 
 /**
- * ²éÑ¯µ¥´ÊĞÅÏ¢
+ * æŸ¥è¯¢å•è¯ä¿¡æ¯
  * 
  * @author wangyongbing
  *
@@ -46,12 +46,12 @@ public class QueryWordController {
 	private QueryWordService queryWordService;
 
 	/**
-	 * ´æ·Åµ¥´ÊµÄ¶ÓÁĞ
+	 * å­˜æ”¾å•è¯çš„é˜Ÿåˆ—
 	 */
 	private Queue<String> wordQueue;
 
 	/**
-	 * ²éÑ¯µ¥´Êº¬Òå
+	 * æŸ¥è¯¢å•è¯å«ä¹‰
 	 * 
 	 * @param request
 	 * @return
@@ -61,19 +61,20 @@ public class QueryWordController {
 	public ModelAndView queryWord(HttpServletRequest request,
 			@RequestParam(value = "word", required = false) String word)
 			throws MalformedURLException {
+		logger.debug("start search wordï¼š{}",word);
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("queryword");
 
 		if (!StringUtils.isEmpty(word)) {
 			mv.addObject("word", word);
-			// Æ´´ÕgetÇëÇóµÄURL×Ö´®
+			// æ‹¼å‡‘getè¯·æ±‚çš„URLå­—ä¸²
 			String getURL = QueryWordConstant.SB_URL + word;
 
 			String resp = null;
 			try {
 				resp = HTTPURLUtil.doGet(getURL, null);
 			} catch (IOException e) {
-				logger.error(SYS_CODE + ".queryWord ÉÈ±´Íø²éÑ¯µ¥¸öµ¥´Ê£º {} ³öÏÖÒì³£ ", word,
+				logger.error(SYS_CODE + ".queryWord æ‰‡è´ç½‘æŸ¥è¯¢å•ä¸ªå•è¯ï¼š {} å‡ºç°å¼‚å¸¸ ", word,
 						e);
 			}
 
@@ -83,7 +84,7 @@ public class QueryWordController {
 
 			QueryWord qw = null;
 
-			// ½«·µ»Øjson¶ÔÏó½øĞĞ²ğ·Ö×é×°
+			// å°†è¿”å›jsonå¯¹è±¡è¿›è¡Œæ‹†åˆ†ç»„è£…
 			JsonObject json = JsonUtils.getMapFromJsonVO(resp);
 			if (null != json) {
 				qw = getQueryWord(json);
@@ -95,7 +96,7 @@ public class QueryWordController {
 	}
 
 	/**
-	 * ½«·µ»Ø¶ÔÏó·â×°Îªpojo
+	 * å°†è¿”å›å¯¹è±¡å°è£…ä¸ºpojo
 	 * 
 	 * @param json
 	 */
@@ -118,7 +119,7 @@ public class QueryWordController {
 	}
 
 	/**
-	 * ÓÃkeyÔÚjsonÖĞ²éÕÒ£¬ÕÒ²»µ½·µ»Ønull
+	 * ç”¨keyåœ¨jsonä¸­æŸ¥æ‰¾ï¼Œæ‰¾ä¸åˆ°è¿”å›null
 	 * 
 	 * @param json
 	 * @param key
@@ -129,7 +130,7 @@ public class QueryWordController {
 	}
 
 	/**
-	 * ÓÃkey1ÔÚkeyÔÚjsonÖĞ²éÕÒµÄ½á¹ûÖĞ²éÕÒ£¬ÕÒ²»µ½·µ»Ønull
+	 * ç”¨key1åœ¨keyåœ¨jsonä¸­æŸ¥æ‰¾çš„ç»“æœä¸­æŸ¥æ‰¾ï¼Œæ‰¾ä¸åˆ°è¿”å›null
 	 * 
 	 * @param json
 	 * @param key
@@ -143,11 +144,11 @@ public class QueryWordController {
 	}
 
 	/**
-	 * ÅúÁ¿²éÑ¯µ¥´Êº¬Òå
+	 * æ‰¹é‡æŸ¥è¯¢å•è¯å«ä¹‰
 	 * 
 	 * @param request
 	 * @param words
-	 *            ´ú´ÊÒÔ¿Õ¸ñ·Ö¸î
+	 *            ä»£è¯ä»¥ç©ºæ ¼åˆ†å‰²
 	 * @return
 	 * @throws MalformedURLException
 	 */

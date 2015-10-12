@@ -52,13 +52,13 @@ public class HTTPURLUtil {
 
 
 	/**
-	 * Ö´ĞĞHTTP POSTÇëÇó¡£
+	 * æ‰§è¡ŒHTTP POSTè¯·æ±‚ã€‚
 	 * 
 	 * @param url
-	 *            ÇëÇóµØÖ·
+	 *            è¯·æ±‚åœ°å€
 	 * @param params
-	 *            ÇëÇó²ÎÊı
-	 * @return ÏìÓ¦×Ö·û´®
+	 *            è¯·æ±‚å‚æ•°
+	 * @return å“åº”å­—ç¬¦ä¸²
 	 * @throws IOException
 	 */
 	public static String doPost(String url, Map<String, String> params,
@@ -67,15 +67,15 @@ public class HTTPURLUtil {
 	}
 
 	/**
-	 * Ö´ĞĞHTTP POSTÇëÇó¡£
+	 * æ‰§è¡ŒHTTP POSTè¯·æ±‚ã€‚
 	 * 
 	 * @param url
-	 *            ÇëÇóµØÖ·
+	 *            è¯·æ±‚åœ°å€
 	 * @param params
-	 *            ÇëÇó²ÎÊı
+	 *            è¯·æ±‚å‚æ•°
 	 * @param charset
-	 *            ×Ö·û¼¯£¬ÈçUTF-8, GBK, GB2312
-	 * @return ÏìÓ¦×Ö·û´®
+	 *            å­—ç¬¦é›†ï¼Œå¦‚UTF-8, GBK, GB2312
+	 * @return å“åº”å­—ç¬¦ä¸²
 	 * @throws IOException
 	 */
 	public static String doPost(String url, Map<String, String> params,
@@ -91,15 +91,15 @@ public class HTTPURLUtil {
 	}
 
 	/**
-	 * Ö´ĞĞHTTP POSTÇëÇó¡£
+	 * æ‰§è¡ŒHTTP POSTè¯·æ±‚ã€‚
 	 * 
 	 * @param url
-	 *            ÇëÇóµØÖ·
+	 *            è¯·æ±‚åœ°å€
 	 * @param ctype
-	 *            ÇëÇóÀàĞÍ
+	 *            è¯·æ±‚ç±»å‹
 	 * @param content
-	 *            ÇëÇó×Ö½ÚÊı×é
-	 * @return ÏìÓ¦×Ö·û´®
+	 *            è¯·æ±‚å­—èŠ‚æ•°ç»„
+	 * @return å“åº”å­—ç¬¦ä¸²
 	 * @throws IOException
 	 */
 	public static String doPost(String url, String ctype, byte[] content,
@@ -138,15 +138,15 @@ public class HTTPURLUtil {
 	}
 
 	/**
-	 * Ö´ĞĞ´øÎÄ¼şÉÏ´«µÄHTTP POSTÇëÇó¡£
+	 * æ‰§è¡Œå¸¦æ–‡ä»¶ä¸Šä¼ çš„HTTP POSTè¯·æ±‚ã€‚
 	 * 
 	 * @param url
-	 *            ÇëÇóµØÖ·
+	 *            è¯·æ±‚åœ°å€
 	 * @param textParams
-	 *            ÎÄ±¾ÇëÇó²ÎÊı
+	 *            æ–‡æœ¬è¯·æ±‚å‚æ•°
 	 * @param fileParams
-	 *            ÎÄ¼şÇëÇó²ÎÊı
-	 * @return ÏìÓ¦×Ö·û´®
+	 *            æ–‡ä»¶è¯·æ±‚å‚æ•°
+	 * @return å“åº”å­—ç¬¦ä¸²
 	 * @throws IOException
 	 */
 //	public static String doPost(String url, Map<String, String> params,
@@ -162,17 +162,17 @@ public class HTTPURLUtil {
 //	}
 
 	/**
-	 * Ö´ĞĞ´øÎÄ¼şÉÏ´«µÄHTTP POSTÇëÇó¡£
+	 * æ‰§è¡Œå¸¦æ–‡ä»¶ä¸Šä¼ çš„HTTP POSTè¯·æ±‚ã€‚
 	 * 
 	 * @param url
-	 *            ÇëÇóµØÖ·
+	 *            è¯·æ±‚åœ°å€
 	 * @param textParams
-	 *            ÎÄ±¾ÇëÇó²ÎÊı
+	 *            æ–‡æœ¬è¯·æ±‚å‚æ•°
 	 * @param fileParams
-	 *            ÎÄ¼şÇëÇó²ÎÊı
+	 *            æ–‡ä»¶è¯·æ±‚å‚æ•°
 	 * @param charset
-	 *            ×Ö·û¼¯£¬ÈçUTF-8, GBK, GB2312
-	 * @return ÏìÓ¦×Ö·û´®
+	 *            å­—ç¬¦é›†ï¼Œå¦‚UTF-8, GBK, GB2312
+	 * @return å“åº”å­—ç¬¦ä¸²
 	 * @throws IOException
 	 */
 //	public static String doPost(String url, Map<String, String> params,
@@ -182,7 +182,7 @@ public class HTTPURLUtil {
 //			return doPost(url, params, charset, connectTimeout, readTimeout);
 //		}
 //
-//		String boundary = System.currentTimeMillis() + ""; // Ëæ»ú·Ö¸ôÏß
+//		String boundary = System.currentTimeMillis() + ""; // éšæœºåˆ†éš”çº¿
 //		HttpURLConnection conn = null;
 //		OutputStream out = null;
 //		String rsp = null;
@@ -204,7 +204,7 @@ public class HTTPURLUtil {
 //				byte[] entryBoundaryBytes = ("\r\n--" + boundary + "\r\n")
 //						.getBytes(charset);
 //
-//				// ×é×°ÎÄ±¾ÇëÇó²ÎÊı
+//				// ç»„è£…æ–‡æœ¬è¯·æ±‚å‚æ•°
 //				Set<Entry<String, String>> textEntrySet = params.entrySet();
 //				for (Entry<String, String> textEntry : textEntrySet) {
 //					byte[] textBytes = getTextEntry(textEntry.getKey(),
@@ -213,7 +213,7 @@ public class HTTPURLUtil {
 //					out.write(textBytes);
 //				}
 //
-//				// ×é×°ÎÄ¼şÇëÇó²ÎÊı
+//				// ç»„è£…æ–‡ä»¶è¯·æ±‚å‚æ•°
 //				Set<Entry<String, FileItem>> fileEntrySet = fileParams
 //						.entrySet();
 //				for (Entry<String, FileItem> fileEntry : fileEntrySet) {
@@ -226,7 +226,7 @@ public class HTTPURLUtil {
 //					out.write(fileItem.getContent());
 //				}
 //
-//				// Ìí¼ÓÇëÇó½áÊø±êÖ¾
+//				// æ·»åŠ è¯·æ±‚ç»“æŸæ ‡å¿—
 //				byte[] endBoundaryBytes = ("\r\n--" + boundary + "--\r\n")
 //						.getBytes(charset);
 //				out.write(endBoundaryBytes);
@@ -274,13 +274,13 @@ public class HTTPURLUtil {
 	}
 
 	/**
-	 * Ö´ĞĞHTTP GETÇëÇó¡£
+	 * æ‰§è¡ŒHTTP GETè¯·æ±‚ã€‚
 	 * 
 	 * @param url
-	 *            ÇëÇóµØÖ·
+	 *            è¯·æ±‚åœ°å€
 	 * @param params
-	 *            ÇëÇó²ÎÊı
-	 * @return ÏìÓ¦×Ö·û´®
+	 *            è¯·æ±‚å‚æ•°
+	 * @return å“åº”å­—ç¬¦ä¸²
 	 * @throws IOException
 	 */
 	public static String doGet(String url, Map<String, String> params)
@@ -289,15 +289,15 @@ public class HTTPURLUtil {
 	}
 
 	/**
-	 * Ö´ĞĞHTTP GETÇëÇó¡£
+	 * æ‰§è¡ŒHTTP GETè¯·æ±‚ã€‚
 	 * 
 	 * @param url
-	 *            ÇëÇóµØÖ·
+	 *            è¯·æ±‚åœ°å€
 	 * @param params
-	 *            ÇëÇó²ÎÊı
+	 *            è¯·æ±‚å‚æ•°
 	 * @param charset
-	 *            ×Ö·û¼¯£¬ÈçUTF-8, GBK, GB2312
-	 * @return ÏìÓ¦×Ö·û´®
+	 *            å­—ç¬¦é›†ï¼Œå¦‚UTF-8, GBK, GB2312
+	 * @return å“åº”å­—ç¬¦ä¸²
 	 * @throws IOException
 	 */
 	public static String doGet(String url, Map<String, String> params,
@@ -350,7 +350,7 @@ public class HTTPURLUtil {
 			connHttps.setSSLSocketFactory(ctx.getSocketFactory());
 			connHttps.setHostnameVerifier(new HostnameVerifier() {
 				public boolean verify(String hostname, SSLSession session) {
-					return false;// Ä¬ÈÏÈÏÖ¤²»Í¨¹ı£¬½øĞĞÖ¤ÊéĞ£Ñé¡£
+					return false;// é»˜è®¤è®¤è¯ä¸é€šè¿‡ï¼Œè¿›è¡Œè¯ä¹¦æ ¡éªŒã€‚
 				}
 			});
 			conn = connHttps;
@@ -404,7 +404,7 @@ public class HTTPURLUtil {
 		for (Entry<String, String> entry : entries) {
 			String name = entry.getKey();
 			String value = entry.getValue();
-			// ºöÂÔ²ÎÊıÃû»ò²ÎÊıÖµÎª¿ÕµÄ²ÎÊı
+			// å¿½ç•¥å‚æ•°åæˆ–å‚æ•°å€¼ä¸ºç©ºçš„å‚æ•°
 			if (!StringUtils.isEmpty(name) && !StringUtils.isEmpty(value)) {
 				if (hasParam) {
 					query.append("&");
@@ -481,35 +481,35 @@ public class HTTPURLUtil {
 	}
 
 	/**
-	 * Ê¹ÓÃÄ¬ÈÏµÄUTF-8×Ö·û¼¯·´±àÂëÇëÇó²ÎÊıÖµ¡£
+	 * ä½¿ç”¨é»˜è®¤çš„UTF-8å­—ç¬¦é›†åç¼–ç è¯·æ±‚å‚æ•°å€¼ã€‚
 	 * 
 	 * @param value
-	 *            ²ÎÊıÖµ
-	 * @return ·´±àÂëºóµÄ²ÎÊıÖµ
+	 *            å‚æ•°å€¼
+	 * @return åç¼–ç åçš„å‚æ•°å€¼
 	 */
 	public static String decode(String value) {
 		return decode(value, QueryWordConstant.CHARSET_UTF8);
 	}
 
 	/**
-	 * Ê¹ÓÃÄ¬ÈÏµÄUTF-8×Ö·û¼¯±àÂëÇëÇó²ÎÊıÖµ¡£
+	 * ä½¿ç”¨é»˜è®¤çš„UTF-8å­—ç¬¦é›†ç¼–ç è¯·æ±‚å‚æ•°å€¼ã€‚
 	 * 
 	 * @param value
-	 *            ²ÎÊıÖµ
-	 * @return ±àÂëºóµÄ²ÎÊıÖµ
+	 *            å‚æ•°å€¼
+	 * @return ç¼–ç åçš„å‚æ•°å€¼
 	 */
 	public static String encode(String value) {
 		return encode(value, QueryWordConstant.CHARSET_UTF8);
 	}
 
 	/**
-	 * Ê¹ÓÃÖ¸¶¨µÄ×Ö·û¼¯·´±àÂëÇëÇó²ÎÊıÖµ¡£
+	 * ä½¿ç”¨æŒ‡å®šçš„å­—ç¬¦é›†åç¼–ç è¯·æ±‚å‚æ•°å€¼ã€‚
 	 * 
 	 * @param value
-	 *            ²ÎÊıÖµ
+	 *            å‚æ•°å€¼
 	 * @param charset
-	 *            ×Ö·û¼¯
-	 * @return ·´±àÂëºóµÄ²ÎÊıÖµ
+	 *            å­—ç¬¦é›†
+	 * @return åç¼–ç åçš„å‚æ•°å€¼
 	 */
 	public static String decode(String value, String charset) {
 		String result = null;
@@ -524,13 +524,13 @@ public class HTTPURLUtil {
 	}
 
 	/**
-	 * Ê¹ÓÃÖ¸¶¨µÄ×Ö·û¼¯±àÂëÇëÇó²ÎÊıÖµ¡£
+	 * ä½¿ç”¨æŒ‡å®šçš„å­—ç¬¦é›†ç¼–ç è¯·æ±‚å‚æ•°å€¼ã€‚
 	 * 
 	 * @param value
-	 *            ²ÎÊıÖµ
+	 *            å‚æ•°å€¼
 	 * @param charset
-	 *            ×Ö·û¼¯
-	 * @return ±àÂëºóµÄ²ÎÊıÖµ
+	 *            å­—ç¬¦é›†
+	 * @return ç¼–ç åçš„å‚æ•°å€¼
 	 */
 	public static String encode(String value, String charset) {
 		String result = null;
@@ -556,11 +556,11 @@ public class HTTPURLUtil {
 	}
 
 	/**
-	 * ´ÓURLÖĞÌáÈ¡ËùÓĞµÄ²ÎÊı¡£
+	 * ä»URLä¸­æå–æ‰€æœ‰çš„å‚æ•°ã€‚
 	 * 
 	 * @param query
-	 *            URLµØÖ·
-	 * @return ²ÎÊıÓ³Éä
+	 *            URLåœ°å€
+	 * @return å‚æ•°æ˜ å°„
 	 */
 	public static Map<String, String> splitUrlQuery(String query) {
 		Map<String, String> result = new HashMap<String, String>();

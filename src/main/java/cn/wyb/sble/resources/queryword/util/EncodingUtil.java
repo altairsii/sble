@@ -6,13 +6,13 @@ import java.net.URLDecoder;
 public class EncodingUtil {
 
 	/**
-	 * ÒÔÄ¬ÈÏµÄutf-8½âÂëstring
+	 * ä»¥é»˜è®¤çš„utf-8è§£ç string
 	 * @param str
 	 * @return
 	 */
 	public static String decodeUrlEncodedString(String str,String encoding){
 		try {
-		    // ·ÀÖ¹XSS¹¥»÷
+		    // é˜²æ­¢XSSæ”»å‡»
 			return str == null ? null : SafeUtil.safeString(URLDecoder.decode(str, encoding));
 		} catch (UnsupportedEncodingException e) {
 			throw new RuntimeException(e);

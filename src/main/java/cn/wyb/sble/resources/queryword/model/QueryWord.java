@@ -1,50 +1,50 @@
 package cn.wyb.sble.resources.queryword.model;
 
 /**
- * ÉÈ±´²éµ¥´Ê
+ * æ‰‡è´æŸ¥å•è¯
  * @author wangyongbing
  *
  */
 public class QueryWord {
 
 	/**
-	 * array ·µ»ØÓ¢ÎÄÊÍÒåµÄÊı×é
+	 * array è¿”å›è‹±æ–‡é‡Šä¹‰çš„æ•°ç»„
 	 */
 	private String en_definitions; 
 	/**
-	 * object Ó¢ÎÄÊÍÒå
+	 * object è‹±æ–‡é‡Šä¹‰
 	 */
 	private String en_definition; 
 	/**
-	 * object ÖĞÎÄÊÍÒå
+	 * object ä¸­æ–‡é‡Šä¹‰
 	 */
 	private String cn_definition; 
 	/**
-	 * int µ¥´ÊµÄid
+	 * int å•è¯çš„id
 	 */
 	private String id; 
 	/**
-	 * int µ¥´ÊµÄÊìÏ¤¶È
+	 * int å•è¯çš„ç†Ÿæ‚‰åº¦
 	 */
 	private String retention; 
 	/**
-	 * string ÖĞÎÄÊÍÒå
+	 * string ä¸­æ–‡é‡Šä¹‰
 	 */
 	private String definition; 
 	/**
-	 * int ÓÃ»§×Ô¶¨ÒåµÄÄ¿±êÑ§Ï°¶È
+	 * int ç”¨æˆ·è‡ªå®šä¹‰çš„ç›®æ ‡å­¦ä¹ åº¦
 	 */
 	private String target_retention; 
 	/**
-	 * long learing id£¬Èç¹ûÎ´·µ»Ø£¬ÔÚ±íÃ÷ÓÃ»§Ã»Ñ§¹ı¸Ãµ¥´Ê
+	 * long learing idï¼Œå¦‚æœæœªè¿”å›ï¼Œåœ¨è¡¨æ˜ç”¨æˆ·æ²¡å­¦è¿‡è¯¥å•è¯
 	 */
 	private String learning_id; 
 	/**
-	 * string ²éÑ¯µÄµ¥´Ê
+	 * string æŸ¥è¯¢çš„å•è¯
 	 */
 	private String content; 
 	/**
-	 * string µ¥´ÊµÄÒô±ê
+	 * string å•è¯çš„éŸ³æ ‡
 	 */
 	private String pronunciation; 
 

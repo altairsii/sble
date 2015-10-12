@@ -2,8 +2,8 @@ package cn.wyb.sble.resources.queryword.constant;
 
 /**
  * 
- * Òì³£Âë
- * °üÂ·¾¶Ê××ÖÄ¸+×ÊÔ´°üÃû
+ * å¼‚å¸¸ç 
+ * åŒ…è·¯å¾„é¦–å­—æ¯+èµ„æºåŒ…å
  * @author wangyongbing
  *
  */

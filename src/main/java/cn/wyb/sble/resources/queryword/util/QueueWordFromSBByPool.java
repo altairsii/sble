@@ -16,7 +16,7 @@ import cn.wyb.sble.resources.queryword.constant.QueryWordConstant;
 import cn.wyb.sble.resources.queryword.model.QueryWord;
 
 /**
- * ²ÉÓÃ¶àÏß³ÌµÄ·½Ê½È¥ÉÈ±´²éÑ¯µ¥´Ê
+ * é‡‡ç”¨å¤šçº¿ç¨‹çš„æ–¹å¼å»æ‰‡è´æŸ¥è¯¢å•è¯
  * 
  * @author wangyongbing
  *
@@ -63,20 +63,20 @@ public class QueueWordFromSBByPool {
 	}
 
 	/**
-	 * Êµ¼Ê²éÑ¯²Ù×÷
+	 * å®é™…æŸ¥è¯¢æ“ä½œ
 	 * 
 	 * @param word
 	 * @param queryWord 
 	 */
 	private void queryWord(String word, List<QueryWord> queryWord) {
-		// Æ´´ÕgetÇëÇóµÄURL×Ö´®
+		// æ‹¼å‡‘getè¯·æ±‚çš„URLå­—ä¸²
 		String getURL = QueryWordConstant.SB_URL + word;
 
 		String resp = null;
 		try {
 			resp = HTTPURLUtil.doGet(getURL, null);
 		} catch (IOException e) {
-			logger.error(SYS_CODE + ".queryWord : ÏòÉÈ±´·¢ËÍÇëÇó²éÑ¯µ¥´Ê£º{} ³ö´í",word);
+			logger.error(SYS_CODE + ".queryWord : å‘æ‰‡è´å‘é€è¯·æ±‚æŸ¥è¯¢å•è¯ï¼š{} å‡ºé”™",word);
 		}
 
 		QueryWord qw = JsonUtils.getPogo(resp, QueryWord.class);

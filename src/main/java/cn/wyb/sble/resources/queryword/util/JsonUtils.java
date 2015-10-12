@@ -21,9 +21,9 @@ public class JsonUtils {
 	}
 	
 	/**
-	 * ½«json×ª»»Îªmap£¬valueÊÇobject
+	 * å°†jsonè½¬æ¢ä¸ºmapï¼Œvalueæ˜¯object
 	 * 
-	 * @param data jsonÊı¾İ
+	 * @param data jsonæ•°æ®
 	 * @return
 	 */
 	public static JsonObject  getMapFromJsonVO(String data){
@@ -31,9 +31,9 @@ public class JsonUtils {
 	}
 	
 	/**
-	 * ½«json×ª»»Îªmap£¬valueÊÇString
+	 * å°†jsonè½¬æ¢ä¸ºmapï¼Œvalueæ˜¯String
 	 * 
-	 * @param data jsonÊı¾İ
+	 * @param data jsonæ•°æ®
 	 * @return
 	 */
 	public static Map<String,String> getMapFromJsonVS(String data){
@@ -41,7 +41,7 @@ public class JsonUtils {
 	}
 	
 	/**
-	 * ½«json¶ÔÏó×ª»»ÎªjavaÀà
+	 * å°†jsonå¯¹è±¡è½¬æ¢ä¸ºjavaç±»
 	 * @param data
 	 * @param clazz
 	 * @return
