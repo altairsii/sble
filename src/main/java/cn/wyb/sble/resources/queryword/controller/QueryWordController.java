@@ -114,6 +114,8 @@ public class QueryWordController {
 			qw.setPronunciation(getStringIfNull(json, "pronunciation"));
 			qw.setRetention(getStringIfNull(json, "retention"));
 			qw.setTarget_retention(getStringIfNull(json, "target_retention"));
+			qw.setUk_audio(getStringIfNull(json, "uk_audio"));
+			qw.setUs_audio(getStringIfNull(json, "us_audio"));
 		}
 		return qw;
 	}

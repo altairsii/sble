@@ -47,6 +47,33 @@ public class QueryWord {
 	 * string 单词的音标
 	 */
 	private String pronunciation; 
+	
+	/**
+	 * 英式发音
+	 */
+	private String uk_audio;
+	
+	/**
+	 * 美式发音
+	 */
+	private String us_audio;
+
+	
+	public String getUk_audio() {
+		return uk_audio;
+	}
+
+	public void setUk_audio(String uk_audio) {
+		this.uk_audio = uk_audio;
+	}
+
+	public String getUs_audio() {
+		return us_audio;
+	}
+
+	public void setUs_audio(String us_audio) {
+		this.us_audio = us_audio;
+	}
 
 	public String getEn_definitions() {
 		return en_definitions;
