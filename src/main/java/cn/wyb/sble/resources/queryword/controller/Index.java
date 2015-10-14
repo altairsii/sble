@@ -1,19 +1,23 @@
 package cn.wyb.sble.resources.queryword.controller;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class Index {
 
-	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	public ModelAndView index(HttpServletRequest request){
+	@RequestMapping("/index")
+	public ModelAndView  index(Model model){
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("index");
+		mv.setViewName("hello.html");
+		Map<String,String> root = new HashMap<String,String>();
+		root.put("user", "wyb");
+		mv.addObject("root",root);
 		return mv;
 	}
 }

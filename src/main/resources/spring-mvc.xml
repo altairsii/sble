@@ -1,68 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans:beans xmlns="http://www.springframework.org/schema/mvc"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context"
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="
-        http://www.springframework.org/schema/mvc 
-        http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
-        http://www.springframework.org/schema/beans 
-        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
-        http://www.springframework.org/schema/context 
-        http://www.springframework.org/schema/context/spring-context.xsd">
+         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-	<annotation-driven />
+	<mvc:annotation-driven />
 
 	<context:component-scan base-package="cn.wyb.sble.resources.*" />
 
-	<beans:bean
+	<bean
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<beans:property name="locations" value="classpath:jdbc.properties"></beans:property>
-	</beans:bean>
+		<property name="locations" value="classpath:jdbc.properties"></property>
+	</bean>
 
-	<beans:bean id="dataSource"
+	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<beans:property name="driverClassName" value="${jdbc.driverClassName}" />
-		<beans:property name="url" value="${jdbc.url}" />
-		<beans:property name="username" value="${jdbc.username}" />
-		<beans:property name="password" value="${jdbc.password}" />
-	</beans:bean>
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
 
 	<!-- 完成请求和注解POJO的映射 -->
-	<beans:bean
+	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-	</beans:bean>
+	</bean>
 
-	<beans:bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/"></beans:property>
-		<beans:property name="suffix" value=".jsp"></beans:property>
-	</beans:bean>
 
 	<!-- 国际化 -->
-	<beans:bean id="messageSource"
+	<bean id="messageSource"
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-		<beans:property name="basename" value="classpath:i18n/messages" />
-		<beans:property name="defaultEncoding" value="UTF-8" />
-	</beans:bean>
+		<property name="basename" value="classpath:i18n/messages" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
 
-	<!-- <beans:bean id="clocaleResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"> 
-		<beans:property name="defaultLocale" value="en" /> </beans:bean> -->
+	<!-- <bean id="clocaleResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"> 
+		<property name="defaultLocale" value="en" /> </bean> -->
 
-	<beans:bean id="localeResolver"
+	<bean id="localeResolver"
 		class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
-		<beans:property name="defaultLocale" value="ch" />
-	</beans:bean>
+		<property name="defaultLocale" value="ch" />
+	</bean>
 
-	
+
 
 
 	<!-- spring事务 -->
-	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<beans:property name="dataSource" ref="dataSource" />
-		<beans:property name="mapperLocations" value="classpath:mybatis/**/*Mapper.xml" />
-	</beans:bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath:mybatis/**/*Mapper.xml" />
+	</bean>
 
-	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-		<beans:constructor-arg index="0" ref="sqlSessionFactory" />
-	</beans:bean>
-</beans:beans>
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+
+	<!-- FreeMarker -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.freemarker.FreeMarkerView" />
+		<property name="contentType" value="text/html; charset=utf-8" />
+	</bean>
+	<bean id="freeMarkerConfig"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<!-- 模板根目录 -->
+		<property name="templateLoaderPaths" value="/WEB-INF/views/" />
+		<!-- 编码格式 -->
+		<property name="defaultEncoding" value="utf-8" />
+	</bean>
+
+</beans>
